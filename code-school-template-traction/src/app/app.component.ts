@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -30,6 +31,8 @@ export class AppComponent {
         "price": 24.99
       }
   ];
+
+  tyres:Tyre[] = this.cars;
 
   calcTotalParts() {
     let totalParts =0;
