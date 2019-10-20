@@ -1,4 +1,4 @@
-class Tyre {
+export class Tyre {
     id: number;
     name: string;
     description: string;

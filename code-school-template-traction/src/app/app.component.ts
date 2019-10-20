@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { Tyre } from './tyre';
+import { Tyres} from './mockData/tyreConst';
 
 @Component({
   selector: 'app-root',
@@ -8,31 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Ultra Racing';
-  cars=[
-    {
-      "id": 1,
-      "name": "Super Tires",
-      "description": "These tires are the very best",
-      "inStock": 5,
-      "price": 4.99
-      },
-      {
-        "id": 2,
-        "name": "Reinforced Shocks",
-        "description": "Shocks made from kryptonite",
-        "inStock": 4,
-        "price": 9.99
-      },
-      {
-        "id": 3,
-        "name": "Padded Seats",
-        "description": "Super soft seats for a smooth ride",
-        "inStock": 0,
-        "price": 24.99
-      }
-  ];
+  cars: Tyre[];
 
-  tyres:Tyre[] = this.cars;
+  ngOnInit() {
+    this.cars = Tyres;
+  }
 
   calcTotalParts() {
     let totalParts =0;

@@ -7,7 +7,7 @@
 </div>
 <h2>Here are car tyres to start: <span>Total tyres in stock: {{calcTotalParts()}}</span><span>, Total price of tyres in stock: {{calcTotalPrice()}}</span></h2>
 <ul>
-  <li *ngFor="let car of tyres">
+  <li *ngFor="let car of cars">
     <h3>{{car.name | uppercase}}</h3>
     <div>{{car.description}}</div>
     <div>{{car.price | currency: 'EUR' : true}}</div>
